@@ -1,0 +1,52 @@
+# ---- data & large artifacts (host on Zenodo / the scGRAM portal, not git) ----
+data/*
+!data/README.md
+predictions/
+model_output*/
+training_data/
+Joint_Differential/
+*_joint_master.csv.gz
+*.npy
+*.npz
+*.mmap
+*.bam
+*.bed
+*.gtf
+*.fa
+*.fasta
+*.csv.gz
+
+# ---- run outputs / logs / checkpoints ----
+*.out
+*.err
+*.log
+.checkpoints/
+.markers/
+figures/
+step*_logs/
+monitor*.log
+
+# ---- python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+env/
+
+# ---- editor / OS ----
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# ---- manuscript artifacts (not part of the code release) ----
+*.docx
+*.pdf
+*.bak
+
+# large third-party model weights — download via benchmarks/sei_src (do NOT commit)
+*.pth
+*.pt
+*.h5
+*.hdf5

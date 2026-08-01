@@ -1,0 +1,37 @@
+# scGRAM main environment (training, prediction, downstream analysis, RNA validation).
+# The DNA-foundation-model benchmarks require a SEPARATE environment — see README
+# (section "Benchmark environment") for the dnabert2-env pins.
+#
+#   conda env create -f environment.yml
+#   conda activate scgram-env
+name: scgram-env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - numba
+  - pyarrow
+  - duckdb
+  - pysam
+  - pybedtools
+  - bedtools
+  - htslib
+  - tqdm
+  - umap-learn
+  - xgboost
+  - h5py
+  - pip:
+      # PyTorch with CUDA 12.1 — adjust the index URL to your CUDA version.
+      # See https://pytorch.org/get-started/locally/
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - torch==2.5.1
+      - anndata
+      - scanpy
