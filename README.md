@@ -91,6 +91,13 @@ scgram/
 > **NOTE — `benchmarks/sei_src/`** is vendored third-party code (the Sei architecture from
 > FunctionLab). It is included unmodified for reproducibility and retains its own upstream
 > licence; it is *not* covered by this repository's licence.
+>
+> **The pretrained Sei weights are NOT shipped in this repo** (the `sei.pth` file is ~2.3 GB and
+> exceeds GitHub's file-size limit; it is git-ignored). Only the Sei architecture
+> (`benchmarks/sei_src/model/sei.py`) is vendored here. To run the Sei benchmark, obtain the
+> weights from FunctionLab's sei-framework
+> (https://github.com/FunctionLab/sei-framework — see its `download_data.sh`) and place the model
+> file at `benchmarks/sei_src/model/sei.pth`.
 
 ---
 
@@ -213,5 +220,6 @@ If you use scGRAM, please cite:
 
 ## License
 
-This repository is released under the *[LICENSE — e.g. MIT / GPL-3.0]* license (see `LICENSE`).
-Vendored third-party code under `benchmarks/sei_src/` retains its original upstream license.
+This repository is released under the **GNU General Public License v3.0 (GPL-3.0)**
+(see `LICENSE`). Vendored third-party code under `benchmarks/sei_src/` retains its original
+upstream license.
